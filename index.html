@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-cover">
+        <form id="search-option">
+          <div class="row">
+            <div class="col-3">
+              <input
+                type="search"
+                placeholder="Enter a city... 🙂"
+                class="form-control"
+                id="search-city"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-info"
+                autofocus="on"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                type="button"
+                id="location-button"
+                class="btn btn-success"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-8">
+            <h1 id="city">....</h1>
+            <ul>
+              <li id="fame">Friday 18:00</li>
+              <li>Humidity: <span id="humidity">54</span>%</li>
+              <li>Wind: <span id="wind">10</span>km/h</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy icon"
+                class="icon-day float left"
+              />
+
+              <span class="degrees" id="degrees">22</span
+              ><span class="units"
+                ><a href="#" id="celsius-link"> °C |</a>
+                <a href="#" id="conversion-link">°F</a></span
+              >
+              <ul>
+                <li id="description">Partly Cloudy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <h6>Friday</h6>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt=""
+              />
+              <span>31°16°</span>
+            </div>
+            <div class="col-2">
+              <h6>Sat</h6>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt=""
+              />
+              <span>28°18°</span>
+            </div>
+            <div class="col-2">
+              <h6>Sun</h6>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt=""
+              />
+              <span>26°19°</span>
+            </div>
+            <div class="col-2">
+              <h6>Mon</h6>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png"
+              />
+              <span class="shady">23°15°</span>
+            </div>
+            <div class="col-2">
+              <h6>Tues</h6>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png"
+                alt=""
+              />
+              <span class="shady">23°14°</span>
+            </div>
+            <div class="col-2">
+              <h6>Wed</h6>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt=""
+              />
+              <span class="shady">27°17°</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
